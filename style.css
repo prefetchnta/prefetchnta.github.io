@@ -1,0 +1,27 @@
+body {
+	font-family: sans-serif;
+}
+table {
+	border-width: 2px;
+	border-style: solid;
+	border-color: #000000;
+	word-break: break-all;
+}
+.crrt {
+	color: #FF0000;
+	text-align: center;
+	background-color: #000000;
+}
+.head {
+	color: #FFFFFF;
+	text-align: center;
+	background-color: #000000;
+}
+.head a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.head a:hover {
+	color: #FF0000;
+	text-decoration: none;
+}
