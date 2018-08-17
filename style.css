@@ -1,7 +1,12 @@
 body {
 	font-family: Helvetica, Arial, Vernada, Tahoma, "Microsoft YaHei", SimSun, Heiti, sans-serif;
 }
-table {
+.none_tab {
+	border-width: 0px;
+	border-color: #000000;
+	word-break: break-all;
+}
+.line_tab {
 	border-width: 2px;
 	border-style: solid;
 	border-color: #000000;
