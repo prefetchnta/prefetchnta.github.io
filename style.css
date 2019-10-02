@@ -27,6 +27,9 @@ body {
 	text-align: left;
 	background-color: #FFFFFF;
 }
+.text div {
+	line-height: 150%;
+}
 .head a {
 	color: #FFFFFF;
 	text-decoration: none;
