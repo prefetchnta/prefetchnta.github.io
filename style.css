@@ -22,11 +22,24 @@ body {
 	text-align: center;
 	background-color: #000000;
 }
+.text td {
+	color: #000000;
+	text-align: left;
+	background-color: #FFFFFF;
+}
 .head a {
 	color: #FFFFFF;
 	text-decoration: none;
 }
 .head a:hover {
 	color: #FF0000;
+	text-decoration: none;
+}
+.text a {
+	color: #000000;
+	text-decoration: none;
+}
+.text a:hover {
+	color: #0000FF;
 	text-decoration: none;
 }
