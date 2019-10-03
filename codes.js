@@ -54,11 +54,14 @@ function articleDownload (root, name)
 /****************/
 function articlePageSplit (root, list, split, crrt)
 {
+	if (isNaN(crrt))
+		crrt = 0;
+
 	var total = list.length;
 	var begin = crrt * split;
 	var end = begin + split;
 
-	if (begin >= total) {
+	if (begin < 0 || begin >= total) {
 		begin = 0;
 		end = split;
 		crrt = 0;
@@ -71,10 +74,10 @@ function articlePageSplit (root, list, split, crrt)
 		var name = (list[i])["name"];
 		var time = (list[i])["time"];
 
-		document.writeln('<table class="none_tab" width="1111px" cellspacing="2" cellpadding="8"><tr><td></td></tr></table>');
-		document.writeln('<table class="line_tab" width="1111px" cellspacing="2" cellpadding="8"><tr><td class="head"><b>' + head + '</b></td></tr>');
-		document.writeln('<tr><td class="text"><div id="' + name + '"></div></td></tr>');
-		document.writeln('<tr><td align="right"><hr/><b>' + time + "</b></td></tr></table>");
+		document.write('<table class="none_tab" width="1111px" cellspacing="2" cellpadding="8"><tr><td></td></tr></table>');
+		document.write('<table class="line_tab" width="1111px" cellspacing="2" cellpadding="8"><tr><td class="head"><b>' + head + '</b></td></tr>');
+		document.write('<tr><td class="text"><div id="' + name + '"></div></td></tr>');
+		document.write('<tr><td align="right"><hr/><b>' + time + "</b></td></tr></table>");
 		articleDownload(root, name);
 	}
 
@@ -88,7 +91,7 @@ function articlePageSplit (root, list, split, crrt)
 		foots[0] = '<a href="1article.html?page=' + String(crrt - 1) + '">上一页</a>';
 	if (crrt < pages - 1)
 		foots[2] = '<a href="1article.html?page=' + String(crrt + 1) + '">下一页</a>';
-	document.writeln('<table class="none_tab" width="1111px" cellspacing="2" cellpadding="8"><tr><td></td></tr></table>');
-	document.writeln('<table class="line_tab" width="1111px" cellspacing="2" cellpadding="8"><tr><td class="head" width="10%">' + foots[0] + '</td>');
-	document.writeln('<td class="head">' + foots[1] + '</td><td class="head" width="10%">' + foots[2] + '</td></tr></table>');
+	document.write('<table class="none_tab" width="1111px" cellspacing="2" cellpadding="8"><tr><td></td></tr></table>');
+	document.write('<table class="line_tab" width="1111px" cellspacing="2" cellpadding="8"><tr><td class="head" width="10%">' + foots[0] + '</td>');
+	document.write('<td class="head">' + foots[1] + '</td><td class="head" width="10%">' + foots[2] + '</td></tr></table>');
 }
