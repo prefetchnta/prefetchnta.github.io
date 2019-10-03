@@ -33,6 +33,23 @@ function getUrlRequest ()
 }
 
 /****************/
+/* 下载文章内容 */
+/****************/
+function articleDownload (root, name)
+{
+	var http = new XMLHttpRequest ();
+
+	http.open("GET", root + name + ".txt", true);
+	http.send(null);
+	http.onreadystatechange = function () {
+		if (http.readyState == 4 && http.status == 200)
+			document.getElementById(name).innerHTML = http.responseText;
+		else
+			document.getElementById(name).innerHTML = "<center><br/><h1>File Not Found</h1><br/></center>";
+	}
+}
+
+/****************/
 /* 处理文章分页 */
 /****************/
 function articlePageSplit (root, list, split, crrt)
@@ -41,8 +58,9 @@ function articlePageSplit (root, list, split, crrt)
 	var pages = total / split;
 	var begin = crrt * split;
 	var end = begin + split;
-	var http = new XMLHttpRequest ();
 
+	if (end > total)
+		end = total;
 	for (var i = begin; i < end; i++)
 	{
 		var head = (list[i])["head"];
@@ -53,13 +71,6 @@ function articlePageSplit (root, list, split, crrt)
 		document.writeln('<table class="line_tab" width="1111px" cellspacing="2" cellpadding="8"><tr><td class="head"><b>' + head + '</b></td></tr>');
 		document.writeln('<tr><td class="text"><div id="' + name + '"></div></td></tr>');
 		document.writeln('<tr><td align="right"><hr/><b>' + time + "</b></td></tr></table>");
-		http.open("GET", root + name + ".txt", true);
-		http.send(null);
-		http.onreadystatechange = function () {
-			if (http.readyState == 4 && http.status == 200)
-				document.getElementById(name).innerHTML = http.responseText;
-			else
-				document.getElementById(name).innerHTML = "<center><b><font size="10">404 Not Found</font></b></center>";
-		}
+		articleDownload(root, name);
 	}
 }
