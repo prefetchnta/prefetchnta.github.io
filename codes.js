@@ -58,6 +58,10 @@ function articlePageSplit (root, list, split, crrt)
 	var begin = crrt * split;
 	var end = begin + split;
 
+	if (begin >= total) {
+		begin = 0;
+		end = split;
+	}
 	if (end > total)
 		end = total;
 	for (var i = begin; i < end; i++)
