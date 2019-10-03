@@ -45,7 +45,7 @@ function articleDownload (root, name)
 		if (http.readyState == 4 && http.status == 200)
 			document.getElementById(name).innerHTML = http.responseText;
 		else
-			document.getElementById(name).innerHTML = "<center><br/><h1>File Not Found</h1><br/></center>";
+			document.getElementById(name).innerHTML = "<center><br/><h1>!!!文件内容下载失败!!!</h1><br/></center>";
 	}
 }
 
