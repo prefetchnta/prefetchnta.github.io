@@ -31,3 +31,35 @@ function getUrlRequest ()
 	}
 	return null;
 }
+
+/****************/
+/* 处理文章分页 */
+/****************/
+function articlePageSplit (root, list, split, crrt)
+{
+	var total = list.length;
+	var pages = total / split;
+	var begin = crrt * split;
+	var end = begin + split;
+	var http = new XMLHttpRequest ();
+
+	for (var i = begin; i < end; i++)
+	{
+		var head = (list[i])["head"];
+		var name = (list[i])["name"];
+		var time = (list[i])["time"];
+
+		document.writeln('<table class="none_tab" width="1111px" cellspacing="2" cellpadding="8"><tr><td></td></tr></table>');
+		document.writeln('<table class="line_tab" width="1111px" cellspacing="2" cellpadding="8"><tr><td class="head"><b>' + head + '</b></td></tr>');
+		document.writeln('<tr><td class="text"><div id="' + name + '"></div></td></tr>');
+		document.writeln('<tr><td align="right"><hr/><b>' + time + "</b></td></tr></table>");
+		http.open("GET", root + name + ".txt", true);
+		http.send(null);
+		http.onreadystatechange = function () {
+			if (http.readyState == 4 && http.status == 200)
+				document.getElementById(name).innerHTML = http.responseText;
+			else
+				document.getElementById(name).innerHTML = "<center><b><font size="10">404 Not Found</font></b></center>";
+		}
+	}
+}
