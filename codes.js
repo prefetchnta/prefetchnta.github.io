@@ -61,6 +61,7 @@ function articlePageSplit (root, list, split, crrt)
 	if (begin >= total) {
 		begin = 0;
 		end = split;
+		crrt = 0;
 	}
 	if (end > total)
 		end = total;
