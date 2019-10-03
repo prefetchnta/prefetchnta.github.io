@@ -30,8 +30,8 @@
 			var page = getUrlParam("page");
 
 			if (page == null)
-				page = 0;
-			articlePageSplit("article/", list, 10, page);
+				page = "0";
+			articlePageSplit("article/", list, 8, parseInt(page));
 		</script>
 	</div></body>
 </html>

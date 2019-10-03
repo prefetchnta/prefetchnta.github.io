@@ -21,7 +21,7 @@ function getUrlRequest ()
 
 	if (url.indexOf("?") != -1)
 	{
-		var request = new Object();
+		var request = new Object ();
 		var str = url.substr(1);
 
 		strs = str.split("&");
@@ -55,7 +55,6 @@ function articleDownload (root, name)
 function articlePageSplit (root, list, split, crrt)
 {
 	var total = list.length;
-	var pages = total / split;
 	var begin = crrt * split;
 	var end = begin + split;
 
@@ -73,4 +72,18 @@ function articlePageSplit (root, list, split, crrt)
 		document.writeln('<tr><td align="right"><hr/><b>' + time + "</b></td></tr></table>");
 		articleDownload(root, name);
 	}
+
+	var foots = new Object ();
+	var pages = parseInt((total + split - 1) / split);
+
+	foots[0] = "&nbsp;";
+	foots[1] = "共" + String(pages) + "页，当前第" + String(crrt + 1) + "页";
+	foots[2] = "&nbsp;";
+	if (crrt > 0)
+		foots[0] = '<a href="1article.html?page=' + String(crrt - 1) + '">上一页</a>';
+	if (crrt < pages - 1)
+		foots[2] = '<a href="1article.html?page=' + String(crrt + 1) + '">下一页</a>';
+	document.writeln('<table class="none_tab" width="1111px" cellspacing="2" cellpadding="8"><tr><td></td></tr></table>');
+	document.writeln('<table class="line_tab" width="1111px" cellspacing="2" cellpadding="8"><tr><td class="head" width="10%">' + foots[0] + '</td>');
+	document.writeln('<td class="head">' + foots[1] + '</td><td class="head" width="10%">' + foots[2] + '</td></tr></table>');
 }
