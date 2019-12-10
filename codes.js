@@ -110,12 +110,21 @@ function articlePageSplit (root, list, split, crrt)
 		var pages = parseInt((total + split - 1) / split);
 
 		foots[0] = "&nbsp;";
-		foots[1] = "共" + String(pages) + "页，当前第" + String(crrt + 1) + "页";
 		foots[2] = "&nbsp;";
-		if (crrt > 0)
-			foots[0] = '<a href="1article.html?page=' + String(crrt - 1) + '">上一页</a>';
-		if (crrt < pages - 1)
-			foots[2] = '<a href="1article.html?page=' + String(crrt + 1) + '">下一页</a>';
+		if (split != 1) {
+			if (crrt > 0)
+				foots[0] = '<a href="1article.html?page=' + String(crrt - 1) + '">上一页</a>';
+			if (crrt < pages - 1)
+				foots[2] = '<a href="1article.html?page=' + String(crrt + 1) + '">下一页</a>';
+			foots[1] = "共" + String(pages) + "页，当前第" + String(crrt + 1) + "页";
+		}
+		else {
+			if (crrt > 0)
+				foots[0] = '<a href="1article.html?page=' + String(crrt - 1) + '">上一篇</a>';
+			if (crrt < pages - 1)
+				foots[2] = '<a href="1article.html?page=' + String(crrt + 1) + '">下一篇</a>';
+			foots[1] = "共" + String(pages) + "篇，当前第" + String(crrt + 1) + "篇";
+		}
 		document.write('<table class="none_tab" width="1111px" cellspacing="2" cellpadding="8"><tr><td></td></tr></table>');
 		document.write('<table class="line_tab" width="1111px" cellspacing="2" cellpadding="8"><tr><td class="head" width="10%">' + foots[0] + '</td>');
 		document.write('<td class="head">' + foots[1] + '</td><td class="head" width="10%">' + foots[2] + '</td></tr></table>');
