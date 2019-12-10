@@ -50,12 +50,32 @@ function articleDownload (root, name)
 }
 
 /****************/
+/* 取消文章分页 */
+/****************/
+function articleNoSplit ()
+{
+	return 10000;
+}
+
+/****************/
+/* 文章是否分页 */
+/****************/
+function articleIsSplit (value)
+{
+	return (value > 9999) ? false : true;
+}
+
+/****************/
 /* 处理文章分页 */
 /****************/
 function articlePageSplit (root, list, split, crrt)
 {
 	if (isNaN(crrt))
 		crrt = 0;
+	if (split <= 0) {
+		split = articleNoSplit();
+		crrt = 0;
+	}
 
 	var total = list.length;
 	var begin = crrt * split;
@@ -77,21 +97,27 @@ function articlePageSplit (root, list, split, crrt)
 		document.write('<table class="none_tab" width="1111px" cellspacing="2" cellpadding="8"><tr><td></td></tr></table>');
 		document.write('<table class="line_tab" width="1111px" cellspacing="2" cellpadding="8"><tr><td class="head"><b>' + head + '</b></td></tr>');
 		document.write('<tr><td class="text"><div id="' + name + '"></div></td></tr>');
-		document.write('<tr><td align="right"><hr/><b>' + time + "</b></td></tr></table>");
+		if (!articleIsSplit(split))
+			document.write("</table>");
+		else
+			document.write('<tr><td align="right"><hr/><b>' + time + "</b></td></tr></table>");
 		articleDownload(root, name);
 	}
 
-	var foots = new Object ();
-	var pages = parseInt((total + split - 1) / split);
+	if (!articleIsSplit(split))
+	{
+		var foots = new Object ();
+		var pages = parseInt((total + split - 1) / split);
 
-	foots[0] = "&nbsp;";
-	foots[1] = "共" + String(pages) + "页，当前第" + String(crrt + 1) + "页";
-	foots[2] = "&nbsp;";
-	if (crrt > 0)
-		foots[0] = '<a href="1article.html?page=' + String(crrt - 1) + '">上一页</a>';
-	if (crrt < pages - 1)
-		foots[2] = '<a href="1article.html?page=' + String(crrt + 1) + '">下一页</a>';
-	document.write('<table class="none_tab" width="1111px" cellspacing="2" cellpadding="8"><tr><td></td></tr></table>');
-	document.write('<table class="line_tab" width="1111px" cellspacing="2" cellpadding="8"><tr><td class="head" width="10%">' + foots[0] + '</td>');
-	document.write('<td class="head">' + foots[1] + '</td><td class="head" width="10%">' + foots[2] + '</td></tr></table>');
+		foots[0] = "&nbsp;";
+		foots[1] = "共" + String(pages) + "页，当前第" + String(crrt + 1) + "页";
+		foots[2] = "&nbsp;";
+		if (crrt > 0)
+			foots[0] = '<a href="1article.html?page=' + String(crrt - 1) + '">上一页</a>';
+		if (crrt < pages - 1)
+			foots[2] = '<a href="1article.html?page=' + String(crrt + 1) + '">下一页</a>';
+		document.write('<table class="none_tab" width="1111px" cellspacing="2" cellpadding="8"><tr><td></td></tr></table>');
+		document.write('<table class="line_tab" width="1111px" cellspacing="2" cellpadding="8"><tr><td class="head" width="10%">' + foots[0] + '</td>');
+		document.write('<td class="head">' + foots[1] + '</td><td class="head" width="10%">' + foots[2] + '</td></tr></table>');
+	}
 }
