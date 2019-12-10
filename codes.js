@@ -68,7 +68,7 @@ function articleIsSplit (value)
 /****************/
 /* 处理文章分页 */
 /****************/
-function articlePageSplit (root, list, split, crrt)
+function articlePageSplit (root, type, list, split, crrt)
 {
 	if (isNaN(crrt))
 		crrt = 0;
@@ -113,16 +113,16 @@ function articlePageSplit (root, list, split, crrt)
 		foots[2] = "&nbsp;";
 		if (split != 1) {
 			if (crrt > 0)
-				foots[0] = '<a href="1article.html?page=' + String(crrt - 1) + '">上一页</a>';
+				foots[0] = '<a href="' + type + "?page=" + String(crrt - 1) + '">上一页</a>';
 			if (crrt < pages - 1)
-				foots[2] = '<a href="1article.html?page=' + String(crrt + 1) + '">下一页</a>';
+				foots[2] = '<a href="' + type + "?page=" + String(crrt + 1) + '">下一页</a>';
 			foots[1] = "共" + String(pages) + "页，当前第" + String(crrt + 1) + "页";
 		}
 		else {
 			if (crrt > 0)
-				foots[0] = '<a href="1article.html?page=' + String(crrt - 1) + '">上一篇</a>';
+				foots[0] = '<a href="' + type + "?page=" + String(crrt - 1) + '">上一篇</a>';
 			if (crrt < pages - 1)
-				foots[2] = '<a href="1article.html?page=' + String(crrt + 1) + '">下一篇</a>';
+				foots[2] = '<a href="' + type + "?page=" + String(crrt + 1) + '">下一篇</a>';
 			foots[1] = "共" + String(pages) + "篇，当前第" + String(crrt + 1) + "篇";
 		}
 		document.write('<table class="none_tab" width="1111px" cellspacing="2" cellpadding="8"><tr><td></td></tr></table>');
