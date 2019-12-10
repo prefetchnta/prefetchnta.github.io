@@ -104,7 +104,7 @@ function articlePageSplit (root, type, list, split, crrt)
 		articleDownload(root, name);
 	}
 
-	if (!articleIsSplit(split))
+	if (articleIsSplit(split))
 	{
 		var foots = new Object ();
 		var pages = parseInt((total + split - 1) / split);
@@ -128,5 +128,10 @@ function articlePageSplit (root, type, list, split, crrt)
 		document.write('<table class="none_tab" width="1111px" cellspacing="2" cellpadding="8"><tr><td></td></tr></table>');
 		document.write('<table class="line_tab" width="1111px" cellspacing="2" cellpadding="8"><tr><td class="head" width="10%">' + foots[0] + '</td>');
 		document.write('<td class="head">' + foots[1] + '</td><td class="head" width="10%">' + foots[2] + '</td></tr></table>');
+	}
+	else
+	{
+		document.write('<table class="none_tab" width="1111px" cellspacing="2" cellpadding="8"><tr><td></td></tr></table>');
+		document.write('<table class="line_tab" width="1111px" cellspacing="2" cellpadding="8"><tr><td class="head">&nbsp;</td></tr></table>');
 	}
 }
