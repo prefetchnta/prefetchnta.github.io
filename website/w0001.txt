@@ -8,7 +8,7 @@
 			</td>
 			<td width="50%">
 				<ul>
-					<li><a target="_blank" href="https://zh.d2l.ai/">动手学深度学习：https://zh.d2l.ai/</a></li>
+					<li><a target="_blank" href="https://www.lfd.uci.edu/~gohlke/pythonlibs/">非官方 Windows Python 库：https://www.lfd.uci.edu/~gohlke/pythonlibs/</a></li>
 				</ul>
 			</td>
 		</tr>
