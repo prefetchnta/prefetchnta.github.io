@@ -39,10 +39,10 @@ body {
 	text-decoration: none;
 }
 .text a {
-	color: #000000;
+	color: #0000FF;
 	text-decoration: none;
 }
 .text a:hover {
 	color: #0000FF;
-	text-decoration: none;
+	text-decoration: underline;
 }
