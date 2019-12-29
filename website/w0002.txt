@@ -3,13 +3,15 @@
 		<tr>
 			<td width="50%">
 				<ul>
+					<li><a target="_blank" href="https://www.jiumodiary.com/">找书：鸠摩搜索</a></li>
+					<li><a target="_blank" href="https://b-ok.org/">找书：Z-Library</a></li>
 					<li><a target="_blank" href="https://zh.d2l.ai/">书籍：动手学深度学习</a></li>
 				</ul>
 			</td>
 			<td width="50%">
 				<ul>
 					<li><a target="_blank" href="https://www.lfd.uci.edu/~gohlke/pythonlibs/">非官方 Windows Python 库二进制发布</a></li>
-					<li><a target="_blank" href="https://zh.d2l.ai/">书籍：动手学深度学习</a></li>
+					<li><a target="_blank" href="http://graphics.stanford.edu/~seander/bithacks.html">Bit Twiddling Hacks</a></li>
 				</ul>
 			</td>
 		</tr>
