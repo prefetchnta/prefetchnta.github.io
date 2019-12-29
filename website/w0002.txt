@@ -11,7 +11,7 @@
 			<td width="50%">
 				<ul>
 					<li><a target="_blank" href="https://www.lfd.uci.edu/~gohlke/pythonlibs/">非官方 Windows Python 库二进制发布</a></li>
-					<li><a target="_blank" href="http://graphics.stanford.edu/~seander/bithacks.html">Bit Twiddling Hacks</a></li>
+					<li><a target="_blank" href="http://graphics.stanford.edu/~seander/bithacks.html">代码：Bit Twiddling Hacks</a></li>
 				</ul>
 			</td>
 		</tr>
