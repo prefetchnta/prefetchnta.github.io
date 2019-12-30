@@ -5,7 +5,7 @@
 				<ul>
 					<li><a target="_blank" href="https://www.jiumodiary.com/">找书：鸠摩搜索</a></li>
 					<li><a target="_blank" href="https://b-ok.org/">找书：Z-Library</a></li>
-					<li><a target="_blank" href="https://alldatasheet.com/">手册：ALLDATASHEET</a></li>
+					<li><a target="_blank" href="https://alldatasheet.com/">电子：ALLDATASHEET 数据手册</a></li>
 					<li><a target="_blank" href="https://www.ultralibrarian.com/">电子：Ultra Librarian 元件封装库</a></li>
 					<li><a target="_blank" href="https://zh.d2l.ai/">书籍：动手学深度学习</a></li>
 				</ul>
