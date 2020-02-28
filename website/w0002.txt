@@ -8,6 +8,7 @@
 					<li><a target="_blank" href="https://alldatasheet.com/">电子：ALLDATASHEET 数据手册</a></li>
 					<li><a target="_blank" href="https://www.ultralibrarian.com/">电子：Ultra Librarian 元件封装库</a></li>
 					<li><a target="_blank" href="https://zh.d2l.ai/">书籍：动手学深度学习</a></li>
+					<li><a target="_blank" href="https://codingpy.com/books/thinkpython2/index.html">书籍：《Think Python 2e》最新版中文翻译</a></li>
 				</ul>
 			</td>
 			<td width="50%">
