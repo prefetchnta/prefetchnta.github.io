@@ -15,6 +15,7 @@
 			<td width="50%">
 				<ul>
 					<li><a target="_blank" href="https://www.traceparts.com/zh/">机械：3D 零件库</a></li>
+					<li><a target="_blank" href="https://devhints.io/">资料：开发速查表</a></li>
 					<li><a target="_blank" href="http://github-mirror.bugkiller.org/">代码：GitHub 镜像站</a></li>
 					<li><a target="_blank" href="http://graphics.stanford.edu/~seander/bithacks.html">代码：Bit Twiddling Hacks</a></li>
 					<li><a target="_blank" href="https://www.lfd.uci.edu/~gohlke/pythonlibs/">下载：非官方 Windows Python 二进制库</a></li>
