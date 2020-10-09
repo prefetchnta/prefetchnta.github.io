@@ -17,7 +17,7 @@
 					<li><a target="_blank" href="https://www.traceparts.com/zh/">机械：3D 零件库</a></li>
 					<li><a target="_blank" href="https://devhints.io/">资料：开发速查表</a></li>
 					<li><a target="_blank" href="https://d.serctl.com/">工具：代理下载服务</a></li>
-					<li><a target="_blank" href="http://g.widyun.com/">工具：GitHub 代下载服务</a></li>
+					<li><a target="_blank" href="http://gitd.cc/">工具：GitHub 代下载服务</a></li>
 					<li><a target="_blank" href="https://hub.fastgit.org/">代码：GitHub 镜像站</a></li>
 					<li><a target="_blank" href="https://github.com.cnpmjs.org/">代码：GitHub 镜像站</a></li>
 					<li><a target="_blank" href="http://graphics.stanford.edu/~seander/bithacks.html">代码：Bit Twiddling Hacks</a></li>
