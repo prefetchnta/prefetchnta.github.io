@@ -22,6 +22,7 @@
 					<li><a target="_blank" href="http://graphics.stanford.edu/~seander/bithacks.html">代码：Bit Twiddling Hacks</a></li>
 					<li><a target="_blank" href="https://developer.nvidia.com/rdp/cudnn-archive/">下载：cuDNN Archive</a></li>
 					<li><a target="_blank" href="https://developer.nvidia.com/cuda-toolkit-archive/">下载：CUDA Toolkit Archive</a></li>
+					<li><a target="_blank" href="https://software.intel.com/en-us/mkl/">下载：Intel oneAPI Math Kernel Library</a></li>
 					<li><a target="_blank" href="https://www.lfd.uci.edu/~gohlke/pythonlibs/">下载：非官方 Windows Python 二进制库</a></li>
 				</ul>
 			</td>
