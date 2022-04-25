@@ -14,6 +14,7 @@
 			</td>
 			<td width="50%">
 				<ul>
+					<li><a target="_blank" href="https://www.32mcu.com/">电子：单片机查询网</a></li>
 					<li><a target="_blank" href="https://www.traceparts.com/zh/">机械：3D 零件库</a></li>
 					<li><a target="_blank" href="https://devhints.io/">资料：开发速查表</a></li>
 					<li><a target="_blank" href="https://d.serctl.com/">工具：代理下载服务</a></li>
