@@ -11,6 +11,7 @@
 					<li><a target="_blank" href="https://tools.analog.com/en/precisionstudio/">电子：ADI Precision Studio</a></li>
 					<li><a target="_blank" href="https://www.ultralibrarian.com/">电子：Ultra Librarian 元件封装库</a></li>
 					<li><a target="_blank" href="https://zh.d2l.ai/">书籍：动手学深度学习</a></li>
+					<li><a target="_blank" href="https://riscv.org/technical/specifications/">书籍：RISC-V 架构技术规范</a></li>
 					<li><a target="_blank" href="https://software.intel.com/content/www/us/en/develop/articles/intel-sdm.html">书籍：Intel64 &amp; IA-32 架构软件开发者手册</a></li>
 				</ul>
 			</td>
