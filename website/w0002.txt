@@ -4,7 +4,7 @@
 			<td width="50%">
 				<ul>
 					<li><a target="_blank" href="https://www.jiumodiary.com/">找书：鸠摩搜索</a></li>
-					<li><a target="_blank" href="https://z-lib.org/">找书：Z-Library</a></li>
+					<li><a target="_blank" href="https://zlib.pub/">找书：Z-Library</a></li>
 					<li><a target="_blank" href="https://www.32mcu.com/">电子：单片机查询网</a></li>
 					<li><a target="_blank" href="https://www.findboard.cn/">电子：开发板查找网</a></li>
 					<li><a target="_blank" href="https://alldatasheet.com/">电子：ALLDATASHEET 数据手册</a></li>
