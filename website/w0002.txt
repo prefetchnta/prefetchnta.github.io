@@ -20,8 +20,8 @@
 					<li><a target="_blank" href="https://www.traceparts.com/zh/">机械：3D 零件库</a></li>
 					<li><a target="_blank" href="https://devhints.io/">资料：开发速查表</a></li>
 					<li><a target="_blank" href="https://d.serctl.com/">工具：代理下载服务</a></li>
-					<li><a target="_blank" href="https://www.catalog.update.microsoft.com/home.aspx">下载：微软更新目录</a></li>
 					<li><a target="_blank" href="http://graphics.stanford.edu/~seander/bithacks.html">代码：Bit Twiddling Hacks</a></li>
+					<li><a target="_blank" href="https://www.catalog.update.microsoft.com/home.aspx">下载：微软更新目录</a></li>
 					<li><a target="_blank" href="https://developer.nvidia.com/rdp/cudnn-archive/">下载：cuDNN Archive</a></li>
 					<li><a target="_blank" href="https://developer.nvidia.com/cuda-toolkit-archive/">下载：CUDA Toolkit Archive</a></li>
 					<li><a target="_blank" href="https://software.intel.com/en-us/mkl/">下载：Intel oneAPI Math Kernel Library</a></li>
